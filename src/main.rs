@@ -1,9 +1,21 @@
-#[allow(unused_variables)]
 use rand::Rng;
 use std::cmp::Ordering;
 use std::io::stdin;
 
 fn main() {
+    rust_compound_types();
+}
+
+#[allow(unused_variables)]
+fn rust_compound_types() {
+    let tuple: (&str, i8, u8) = ("Let's go", 1, 240);
+    let arr: [u8; 7] = [5; 7];
+    println!("{}", tuple.0);
+    println!("{}", arr[0])
+}
+
+#[allow(dead_code)]
+fn guessing_game() {
     loop {
         println!("Enter your guess: ");
         let mut guess: String = String::new();
